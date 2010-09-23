@@ -106,7 +106,7 @@ module TTFunk
           @unique_subfamily = @strings[3]
           @font_name = @strings[4]
           @version = @strings[5]
-          @postscript_name = @strings[6].first.strip_extended # should only be ONE postscript name
+          @postscript_name = @strings[6].first.nil? ? nil : @strings[6].first.strip_extended # should only be ONE postscript name
           @trademark = @strings[7]
           @manufacturer = @strings[8]
           @designer = @strings[9]
